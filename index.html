@@ -104,6 +104,7 @@
             padding: 3px 8px;
             border-radius: 4px;
             font-weight: 700;
+            white-space: nowrap;
         }
 
         /* 青セクション（川重） */
@@ -138,6 +139,7 @@
             padding: 3px 8px;
             border-radius: 4px;
             font-weight: 700;
+            white-space: nowrap;
         }
 
         .badge-important {
@@ -147,6 +149,7 @@
             padding: 3px 8px;
             border-radius: 4px;
             font-weight: 700;
+            white-space: nowrap;
         }
 
         .card-title {
@@ -155,11 +158,12 @@
             margin-top: 0;
             margin-bottom: 14px;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: space-between;
             border-bottom: 1px solid #f0f0f0;
             padding-bottom: 8px;
             line-height: 1.4;
+            gap: 10px;
         }
 
         p.p-block {
@@ -204,7 +208,7 @@
             display: block;
         }
 
-        /* ★考察・見解用の小さなテキストボックス */
+        /* 考察・見解用ボックス */
         .insight-note {
             background-color: #fffbeb;
             border: 1px solid #fde68a;
@@ -231,6 +235,7 @@
             margin-top: 15px;
             font-size: 13px;
             color: var(--text-sub);
+            word-break: break-all;
         }
 
         .evidence-title {
@@ -245,7 +250,6 @@
         .evidence-link {
             color: #3182ce;
             text-decoration: none;
-            word-break: break-all;
         }
 
         .evidence-link:hover {
@@ -259,7 +263,7 @@
         }
 
         ul.list-block li {
-            margin-bottom: 12px; /* リスト間の余白を少し広げて見やすく */
+            margin-bottom: 12px;
             color: var(--text-main);
         }
 
@@ -287,6 +291,45 @@
             color: #888888;
             border-top: 1px solid var(--border-color);
             padding-top: 18px;
+        }
+
+        /* ★スマートフォン・タブレット向けレスポンシブ対応 */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 15px 10px;
+            }
+            .container {
+                padding: 20px 15px;
+            }
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+            .header h1 {
+                font-size: 18px;
+            }
+            .card-title {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .card-purple, .card-blue {
+                padding: 18px 15px;
+            }
+            .section-header-purple, .section-header-blue {
+                font-size: 16px;
+                padding: 8px 14px;
+                margin-top: 30px;
+            }
+            ul.list-block {
+                padding-left: 16px;
+            }
+            p.p-block {
+                font-size: 14px;
+            }
+            .evidence-box, .insight-note, .detail-box-purple, .detail-box-blue {
+                padding: 12px;
+            }
         }
 
         @media print {
@@ -551,7 +594,7 @@
 
         <div class="detail-box-blue">
             <span class="detail-box-title-blue">■ 技術連携の動向</span>
-            NVIDIAのジェンセン・フアンCEO（最高経営責任者）からの高い評価や、複数社を巻き込んだデジタルツイン（仮想空間への現実再現）技術との統合により、工場・物流現場の完全自動化プラットフォーム構築を目指しています。
+            NVIDIAのジェンセン・フアンCEOからの高い評価や、複数社を巻き込んだデジタルツイン（仮想空間への現実再現）技術との統合により、工場・物流現場の完全自動化プラットフォーム構築を目指しています。
         </div>
 
         <!-- 考察・応用例 -->
